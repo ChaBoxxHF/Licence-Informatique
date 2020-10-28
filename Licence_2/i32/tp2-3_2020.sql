@@ -86,3 +86,60 @@ from atelier where id_intervenant=2;
 select id_participant,nom
 from participant natural join inscription natural join cours
 where danse='salsa';
+
+18)
+select id_participant,nom
+from participant natural join inscription natural join cours
+group by id_participant
+having count(DISTINCT danse) = 2;
+
+
+19)
+select id_cours,danse
+from intervenant natural join atelier natural join cours
+where nom='amandine';
+
+20)
+select id_cours,danse,count(id_participant) as nb_de_participants
+from intervenant natural join atelier natural join cours natural join inscription
+where nom='amandine'
+group by id_cours,danse;
+
+21)
+select id_cours,danse
+from cours natural join inscription natural join participant
+where nom='henri' or nom='melanie'
+group by id_cours
+having count(id_cours)=2;
+
+22)
+SELECT participant.id_participant, participant.nom
+FROM participant, intervenant, inscription, atelier
+WHERE participant.id_participant = inscription.id_participant
+and inscription.id_cours = atelier.id_cours
+and intervenant.id_intervenant = atelier.id_intervenant
+and intervenant.nom = 'denis';
+
+23)
+select count(*) as nombre_participant
+from participant,intervenant, inscription, atelier
+where participant.id_participant=inscription.id_participant and inscription.id_cours = atelier.id_cours and intervenant.id_intervenant = atelier.id_intervenant
+and intervenant.nom in ('amandine', 'denis');
+
+24)
+select id_cours, danse
+from cours c
+group by id_cours
+having(
+  select count(p.sexe)
+  from inscription i, participant p
+  where c.id_cours = i.id_cours
+  and i.id_participant = p.id_participant
+  and p.sexe = 'M'
+) > ALL (
+  select count(p.sexe)
+  from inscription i, participant p
+  where c.id_cours = i.id_cours
+  and i.id_participant = p.id_participant
+  and p.sexe = 'F'
+);
