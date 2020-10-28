@@ -1,0 +1,45 @@
+def som_div_propres(n):
+    i=1
+    som=0
+    while i<n:
+        if n%i==0:
+            som=som+i
+        i+=1
+    return(som)
+
+def est_parfait(n):
+    if som_div_propres(n)==n:
+        return True
+    else:
+        return False
+
+def affiche_parfait(k):
+    i=0
+    L=[]
+    while i<2**k:
+        if est_parfait(i)==True:
+            L=L+[i]
+            i=i+1
+        else:
+            i=i+1
+    return(L)
+
+def presque_parfait(n):
+    if som_div_propres(n)==n-1:
+        return True
+    else:
+        return False
+
+def affiche_presque_parfait(k):
+    i=0
+    L=[]
+    while i<2**k:
+        if presque_parfait(i)==True:
+            L=L+[i]
+            i+=1
+        else:
+            i+=1
+    return(L)
+
+
+

@@ -1,0 +1,30 @@
+def amicaux(n,m):
+    i=1
+    som1=0
+    som2=0
+    while i<n:
+        if n%i==0:
+            som1=som1+i
+        i+=1
+    i=1
+    while i<m:
+        if m%i==0:
+            som2=som2+i
+        i+=1
+    if som2==n and som1==m:
+        return True
+    else:
+        return False
+    
+def affiche_amicaux(k):
+    i=0
+    j=0
+    L=[]
+    while i<2**k and j<2**k:
+        if amicaux(i,j)==True:
+            L=L+[i]
+            i=i+1
+            j+=1
+        else:
+            i=i+1
+    return(L)
