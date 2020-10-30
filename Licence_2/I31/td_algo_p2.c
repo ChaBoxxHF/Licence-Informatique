@@ -460,6 +460,8 @@ int jumeaux(int a, int b)
     else printf("%d et %d ne sont pas jumeaux",a,b);
 }*/
 
+/*exo 94*/
+
 int nbDeChiffres(int x)
 {
 	int nbr = 0;
@@ -493,7 +495,7 @@ int sommeDesChiffres(int x)
 	return x + somme;
 }
 
-int main(){
+/*int main(){
     int x = 45863047;
 	printf("Entrer un nombre x: ");
 	scanf("%d", &x);
@@ -507,4 +509,131 @@ int main(){
 
 	int estCouicable = sommeDesChiffres(eN_1) == sommeDesChiffres(eN_2);
 	printf("%d est couicable ? : %s\n", x, estCouicable ? "Oui" : "Non");
+}*/
+
+/*exo 95*/
+
+/*int main()
+{
+	char a[] = "un\ndeux\ntrois\n";
+	char b[12] = "un deux trois";
+	char c[] = 'abcdefg';
+	char d[] = "Cette "
+						 "phrase"
+						 "est coupée";
+	char e[2] = {'a', '\0'};
+	char f[4] = {'a', 'b', 'c'};
+	char g[4] = "'o'";
+}*/
+
+/*exo 96*/
+
+/*int main()
+{
+	const int N = 10;
+	int A[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int B[] = {0, 2, 1, 3, 5, 4, 6, 8, 7, 9};
+
+	int count = 0;
+	for (int i = 0; i < N; i++)
+		if (A[i] == B[i])
+			count++;
+
+	printf("%d\n", count);
+}*/
+
+/*exo 97*/
+
+/*int main()
+{
+	const int N = 8;
+	int A[] = {0, -1, 8, 9, 18, 2, 3, 4};
+
+	int max = A[0], max_i = 0;
+	for (int i = 1; i < N; i++)
+	{
+		if (A[i] > max)
+		{
+			max = A[i];
+			max_i = i;
+		}
+	}
+
+	printf("A[%d] = %d est le plus grand élement.\n", max_i, max);
+}*/
+
+/*exo 98-99*/
+
+/*int main()
+{
+	const int N = 5;
+	int nombres[N];
+	int tmp;
+
+	printf("Entrer un 1er nombre: ");
+	scanf("%d", &nombres[0]);
+	for (int i = 1; i < N; i++)
+	{
+		printf("Entrer un %dème nombre: ", i);
+		scanf("%d", &tmp);
+
+		if (nombres[i - 1] > tmp)
+		{
+			nombres[i] = nombres[i - 1];
+			nombres[i - 1] = tmp;
+			continue;
+		}
+		nombres[i] = tmp;
+	}
+
+	for (int i = 0; i < N; i++)
+		printf("%d\n", nombres[i]);
+}*/
+
+/*exo 99 corrigé*/
+
+int main(){
+    const int N = 5;
+    int nombres[N];
+    for (int i = 0; i < N; i++){
+        printf("Entrer un nombre: ");
+    scanf("%d", &nombres[i]);
+    }
+    for (int i = N-1; i >=0; i--)
+        printf("%d\n", nombres[i]);
 }
+
+/*exo 100*/
+
+/*int main()
+{
+	const int N = 10;
+	const int x = 5;
+	int A[] = {0, 1, 5, 3, 4, 5, 6, 7, 8, 5};
+
+	for (int i = 0; i < N; i++)
+		if (A[i] == x)
+			printf("A[%d] = %d\n", i, x);
+}*/
+
+/*exo 101*/
+
+
+/*int main()
+{
+	int N = 10, x = 5;
+	int A[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+	int isFind = 0;
+	for (int i = 0; i < N; i++)
+		if (isFind || A[i] == x)
+		{
+			isFind = 1;
+			A[i] = A[i + 1];
+		}
+	if (isFind)
+		N--;
+
+	for (int i = 0; i < N; i++)
+		printf("%d\n", A[i]);
+}*/
