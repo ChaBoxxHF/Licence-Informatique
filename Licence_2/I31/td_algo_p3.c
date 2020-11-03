@@ -76,6 +76,30 @@
 		printf("%d\n", A[i]);
 }*/
 
+/*exo 101 corrigé*/
+
+
+/*#define N 10
+int main(){
+    int A[N]={2,4,1,9,9,5,6,7,1,6};
+    int i, x, j;
+    int c=0;
+    printf("Entrer x: ");
+    scanf("%d", &x);
+    for(i=0;i<N;i++){
+    if(A[i]==x){
+        c++;
+        for(j=i;j<N-1;j++)
+            A[j]=A[j+1];
+            i--;
+    }
+    }
+    for (i = 0; i < N-c; i++)
+        printf("%d ", A[i]);
+        printf("\n");
+}*/
+
+
 /*exo 102*/
 
 /*int main(){
@@ -90,3 +114,72 @@
 
     } while (!=x)
 }*/
+
+/*correction*/
+
+/*#define N 5
+
+int main(){
+	int A[N]={2,3,4,5,6};
+	int g=0,d=N-1, m=(g+d)/2;
+	int x,i;
+	printf("saisir nb:");
+	scanf("%d",&x);
+	while (x!=A[m] && d-g>=0){
+		if (x>A[m]){
+			g=m+1;
+			m=(g+d)/2;
+		}
+		else{
+			d=m-1;
+			m=(d+g)/2;
+		}
+	}
+	if (x==A[m]){
+		printf("%d  est à la position %d\n",x,m);
+	}
+	else{
+		printf("%d n'est pas dans le tableau\n",x);
+	}
+}*/
+
+/*exo 103*/
+
+/*solution 1*/
+
+/*#include <stdio.h>
+
+#define N 10
+
+int main()
+{
+  int vecteurs[2][N] = {{-1, 2, 3, 5, 2, 8, -3, 9, 7, 6},
+                        {2, 3, 8, 9, 7, 1, -4, -5, 6, 9}};
+
+  int prod_scal = 0;
+  for (int i = 0; i < N; i++)
+    prod_scal += vecteurs[0][i] * vecteurs[1][i];
+
+  printf("%d\n", prod_scal);
+}*/
+
+/*SOLUTION 2*/
+
+/*#include <stdio.h>
+
+#define N 10
+
+int main()
+{
+  int A[N] = {-1, 2, 3, 5, 2, 8, -3, 9, 7, 6};
+  int B[N] = {2, 3, 8, 9, 7, 1, -4, -5, 6, 9};
+
+  int prod_scal = 0;
+  for (int i = 0; i < N; i++)
+    prod_scal += A[i] * B[i];
+
+  printf("%d\n", prod_scal);
+}*/
+
+/*exo 104*/
+
