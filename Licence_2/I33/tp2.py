@@ -48,7 +48,7 @@ def euler_phi(n):
         i+=1
     return Zn
 
-# def decompose(n,b):
+def decompose(n):
     l=[]
     while n!=0:
         l+=[n%b]
