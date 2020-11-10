@@ -402,7 +402,7 @@ int estpalindrome(char tab[],int n){
 	return (i==n/2);
 }
 
-int main(){
+/*int main(){
 	char tab[]="radar";
 	int s=nbchar(tab);
 	if (estpalindrome(tab,s)){
@@ -411,4 +411,16 @@ int main(){
 	else{
 		printf("%s n'est pas un palindrome\n",tab);
 	}
+}*/
+
+/*exo 129*/
+
+int max(list l){
+	if (l==NULL) return ERR;
+	int max=l->content;
+	while (l->succ!=NULL){
+		l=l->succ;
+		if (l->content> max) max=l->content;
+	}
+	return max
 }
