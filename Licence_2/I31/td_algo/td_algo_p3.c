@@ -323,7 +323,7 @@ int rechercheseq(int T[],int x){
 
 /*exo 122*/
 
-#define N 5
+/*#define N 5
 #define M 3
 
 void lecture(int T[M][N], int x, int y){
@@ -384,4 +384,31 @@ int sommecontour(int T[M][N]){
 		s+=T[i][N-1];
 	}
 	return s;
+}*/
+
+int nbchar(char tab[]){
+	int c=0;
+	while (tab[c]!="\0"){
+		c++;
+	}
+	return c;
+}
+
+int estpalindrome(char tab[],int n){
+	int i=0;
+	while ((i<n/2)&(tab[i]==tab[n-1-i])){
+		i++;
+	}
+	return (i==n/2);
+}
+
+int main(){
+	char tab[]="radar";
+	int s=nbchar(tab);
+	if (estpalindrome(tab,s)){
+		printf("%s est un palindrome\n",tab);
+	}
+	else{
+		printf("%s n'est pas un palindrome\n",tab);
+	}
 }
