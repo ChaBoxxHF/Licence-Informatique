@@ -415,7 +415,7 @@ int estpalindrome(char tab[],int n){
 
 /*exo 129*/
 
-int max(list l){
+/*int max(list l){
 	if (l==NULL) return ERR;
 	int max=l->content;
 	while (l->succ!=NULL){
@@ -423,4 +423,41 @@ int max(list l){
 		if (l->content> max) max=l->content;
 	}
 	return max
-}
+}*/
+
+/*exo 130*/
+
+/*void concat(list *l1, list l2){
+	if(*l2==NULL) return;
+	if (*l1==NULL){
+		*l1=*l2;
+		return;
+	}
+	list l=*l1
+	while (l->succ!=NULL){
+		l=l->succ;
+	}
+	l->succ=*l2;
+}*/
+
+/*exo 136*/
+
+/*void extraire(list *pl0, list *pl1, list *pl2){
+	list l0=*pl0,l1= NULL, l2=NULL;
+	if (l0==NULL) return;
+	if (L0->content>=0) l1=*pl1=*pl0;
+	else l2=*pl2=*pl0;
+	while (l0->succ!=NULL){
+		l0=l0->succ;
+		if (l0->content>=0){
+			if (l1==NULL) l1=*pl1=l0;
+			else{
+				l2->succ=l0;
+				l2=l2->succ;
+			}
+		}
+	}
+	l1->succ==NULL;
+	l2->succ==NULL;
+}*/
+
