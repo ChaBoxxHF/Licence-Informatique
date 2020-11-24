@@ -21,22 +21,32 @@ int main ( void )
         mpz_setbit (p ,n-1);
         mpz_nextprime (p ,p);
     } while ( mpz_sizeinbase ( p , 2 ) != n ) ;
+
+    printf("\n génération de deux nombre aleatoires inferieurs a p\n");
     //generation de deux nombres aleatoires inferieurs a p
     mpz_urandomm ( a , r , p ) ;
     mpz_urandomm ( b , r , p ) ;
     gmp_printf ( "\na = %Zd\n\n" , a ) ;
     gmp_printf ( "b = %Zd\n\n" , b ) ;
     gmp_printf ( "p = %Zd\n\n" , p ) ;
+
+
     //addition
     mpz_add ( c , a , b ) ;
     gmp_printf ( "addition , c = %Zd\n\n" , c ) ;
+
+
     //soustraction
     mpz_sub ( c , a , b ) ;
     gmp_printf ( "soustraction , c = %Zd\n\n" , c ) ;
+
+
     //multiplication puis reduction modulaire
     mpz_mul ( c , a , b ) ;
     mpz_mod ( c , c , p ) ;
     gmp_printf ( " multiplication modulaire , c = %Zd\n\n" , c ) ;
+
+
     //exponentiation modulaire
     mpz_powm ( c , a , b , p ) ;
     gmp_printf ( "exponentiation modulaire , c = %Zd\n\n" , c ) ;
