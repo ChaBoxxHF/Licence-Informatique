@@ -1,3 +1,2 @@
-sudo -i -u postgres
-mdp
-psql
+sudo -s -u postgres
+psql -U ChaBoxxHF -h localhost projet

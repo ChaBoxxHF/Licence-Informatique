@@ -29,7 +29,7 @@ def det(A):
         d = 0
     return(d/p)
 
-
+print(det())
 
 def gauss(A):
 	if len(A) < len(A[0]):

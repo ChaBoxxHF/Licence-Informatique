@@ -1,10 +1,17 @@
 import pgdb
 
-hostname='localhost'
-username='USERNAME'
-password='PASSWORD'
-database='DBNAME'
+def doQuery( conn ) :
+    cur = conn.cursor()
+    cur.execute(""" SELECT "Nom" FROM "Clients" """)
+    
+    for firstname, lastname in cur.fetchall() :
+        print(firstname, lastname)
 
-myConnection = pgbd.connect (host = hostname, user=username, password = password, database=database)
+hostname='localhost'
+username='ChaBoxxHF'
+password='1702'
+database='projet'
+
+myConnection = pgdb.connect (host = hostname, user=username, password = password, database=database)
 doQuery (myConnection)
 myConnection.close()

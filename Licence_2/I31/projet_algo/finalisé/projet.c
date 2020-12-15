@@ -3,8 +3,7 @@
 #include <time.h>
 #include <gmp.h>
 
-int main () 
-{
+int main (){
     int n;
     unsigned long seed;
     mpz_t a ,b ,A ,B ,Ka ,Kb, p ,g;
