@@ -1,0 +1,15 @@
+read
+store 1
+load #1
+store 2
+read
+jumz 10
+inc 2
+add 1
+store 1
+jump 4
+load 1
+write
+load 2
+write
+stop

@@ -294,3 +294,30 @@
 //     printf("\n");
 // }
 
+/*exo 105*/
+
+// int main(){
+//     int i;
+//     int *p;
+//     i=1;
+//     p=&i;
+//     printf("%d\n",i);
+//     *p=4;
+//     printf("%d\n",*p);
+// }
+
+/*exo 111*/
+
+void carre(int *x)
+{
+	*x *= *x;
+}
+
+int main(){
+    int b;
+	printf("Entrer un nombre: ");
+	scanf("%d", b);
+
+	carre(&b);
+	printf("%d\n", b);
+}
