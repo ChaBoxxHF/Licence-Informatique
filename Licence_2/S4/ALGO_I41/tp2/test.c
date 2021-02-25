@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    uint A[3] = {9, 9, 9};
-    uint i = Increment(A, 3, 10);
-
-    unsigned char n = 8;
-    unsigned char b = 10;
-    uint modifs = test(n, b);
-
-    printf("Incrément: %i\n", i);
-    printf("Modifs totales: %i\n", modifs);
-}
 
 /**
  * \brief Incrémente un nombre A en base b de 1.
@@ -51,4 +40,16 @@ uint test(unsigned char n, unsigned char b) {
     free(A);
 
     return modifications;
+}
+
+int main() {
+    uint A[3] = {9, 9, 9};
+    uint i = Increment(A, 3, 10);
+
+    unsigned char n = 8;
+    unsigned char b = 10;
+    uint modifs = test(n, b);
+
+    printf("Incrément: %i\n", i);
+    printf("Modifs totales: %i\n", modifs);
 }
