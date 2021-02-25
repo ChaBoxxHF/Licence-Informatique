@@ -1,0 +1,17 @@
+load #5
+store 1
+read
+store 2
+store 3
+sub 1
+jumg 11
+dec 3
+load 3
+jumz 14
+load 2
+mul 3
+store 2
+jump 7
+load 2
+write
+stop

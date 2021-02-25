@@ -1,0 +1,11 @@
+load #0
+store 1
+read
+store 2
+read
+store 3
+jumz 
+sub 2
+jumg 4
+load 3
+store 2
