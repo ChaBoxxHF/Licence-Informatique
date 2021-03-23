@@ -10,9 +10,11 @@ double Power(float x, uint n){
 }
 
 int main(){
+    printf("entrez un x:");
     float x;
     scanf("%f",&x);
+    printf("entrez un n:");
     uint n;
     scanf("%d",&n);
-    printf("%f puissance %d vaut: %f\n", x, n, Power(x,n));
+    printf("x=%f puissance n=%u vaut: %f\n", x, n, Power(x,n));
 }

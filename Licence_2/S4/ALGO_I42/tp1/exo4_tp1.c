@@ -12,7 +12,8 @@ int main(void) {
   pid_t pid= fork();
   if (pid==0){
     sleep(5);
-    kill(pid);
+    printf("envoie signal kill");
+    kill(getppid(),SIGUSR1);
   }
   else{
     pause();
