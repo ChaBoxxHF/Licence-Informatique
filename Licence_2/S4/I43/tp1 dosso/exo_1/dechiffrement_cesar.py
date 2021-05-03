@@ -17,7 +17,7 @@ def dechiffrement(message):
                 uncypher+=chr((ord("Z")+1)-ord(message[i])+ord("A"))
             else:
                 uncypher+=chr(ord(message[i])-key)
-        elif message[i]==" ":
+        else:
             uncypher+=message[i]
         i+=1
     return uncypher

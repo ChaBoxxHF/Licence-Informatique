@@ -14,7 +14,7 @@ def chiffrement(message,key):
                 cypher+=chr((ord("A")-1)+ord(message[i])-ord("Z"))
             else:
                 cypher+=chr(ord(message[i])+key)
-        elif message[i]==" ":
+        else:
             cypher+=message[i]
         i+=1
     return cypher

@@ -1,0 +1,2 @@
+def cryptanalyse(osef):
+    break
